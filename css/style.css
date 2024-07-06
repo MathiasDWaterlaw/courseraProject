@@ -1,0 +1,134 @@
+:root{
+    --main-bg: #F4F5F6;
+    --gray-bg: #E6E9EF;
+    --hover-bg:#CDD3DF;
+}
+
+/* CSS RESET - for optimize compatibility between browsers */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* - Styling - */
+
+body {
+    background-color: var(--main-bg);
+}
+
+.flex-box {
+    display: flex;
+}
+
+img.logo {
+    width: 250px;
+}
+
+nav, footer {
+    background-color: var(--gray-bg);
+}
+
+
+/* - HEADER - */
+header {
+    width: 100%;
+}
+
+header img {
+    margin: 1.5em auto 1.5em auto;
+}
+
+
+/* - NAVIGATION BAR - */
+nav {
+    width: 100%;
+    padding: 0 2em;
+    gap: 2em;
+}
+
+nav ul {
+    display: flex;
+    gap: 2em;
+}
+
+/* - MAIN CONTENT - */
+main {
+    padding: 2em;
+}
+
+
+section.flex-box {
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+article {
+    border: 1px solid black;
+    border-radius: 0.5em;
+    background-color: white;
+}
+
+article img {
+    width: 100%;
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+article.promo-card {
+    padding: 1em;
+}
+
+article.card {
+    max-width: 30vw;
+}
+
+div.card-body {
+    padding: 1em;
+}
+
+/* - FOOTER - */
+
+footer {
+    padding: 2em;
+   
+}
+
+/* - Media queries for responsive behavior */
+
+@media (width <= 992px) {
+
+    article.card {
+        max-width: 49%;
+    }
+
+    article.card:last-of-type {
+        max-width: 100%;
+    }
+}
+
+ @media (width <= 768px) {
+    
+    article.card {
+        max-width: 100%;
+    }
+ }
