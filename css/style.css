@@ -4,13 +4,24 @@
     --hover-bg:#CDD3DF;
 }
 
-/* CSS RESET - for optimize compatibility between browsers */
+/* CSS RESET - to optimize compatibility between browsers */
 *,
 *::after,
 *::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+/* - Styling - */
+/* General rules to avoiding redundancies */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--main-bg);
+    font-family: 'Montserrat', sans-serif;
 }
 
 ul {
@@ -21,26 +32,21 @@ ul {
 
 a {
     text-decoration: none;
+    color: black;
+    background-color: var(--gray-bg);
+}
+
+a:hover,
+a:active {
+    background-color: var(--hover-bg);
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 2rem;
-}
-
-/* - Styling - */
-
-/* General rules to avoiding redundancies */
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--main-bg);
+    font-size: 1.5rem;
 }
 
 .flex-box {
@@ -74,6 +80,7 @@ nav {
     padding: 1.5em 4em;
     justify-content: space-between;
     flex-wrap: wrap;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 5px 7px 0px;
 }
 
 nav ul {
@@ -82,15 +89,9 @@ nav ul {
 }
 
 nav a {
-    color: black;
-    padding: 1.5em;
+    padding: 1.6em;
+    padding-bottom: 1.65em;
 }
-
-nav a:hover,
-nav a:active {
-    background-color: var(--hover-bg);
-}
-
 
 /* - MAIN CONTENT - */
 main {
@@ -103,14 +104,14 @@ section.flex-box {
 }
 
 article {
-    border: 1px solid grey;
+    border: 1px solid lightgray;
     border-radius: 0.5em;
     background-color: white;
 }
 
 article img {
     width: 100%;
-    border-radius: 0.5em 0.5em 0 0;
+    border-radius: 0.4em 0.4em 0 0;
 }
 
 article.promo-card {
@@ -134,11 +135,21 @@ article.card {
 }
 
 div.card-body {
-    padding: 1.5em 1em;
+    padding: 1.5em;
 }
 
-article.card h2 {
+.card-body h2 {
     margin-bottom: 0.5em;
+}
+
+.card-footer {
+    margin: 2em 0 1em 0;
+}
+
+.card-footer a {
+    padding: 1em 1.5em;
+    border-radius: 0.5em;
+    border: 0.5px solid lightgrey;
 }
 
 /* - FOOTER - */
@@ -193,17 +204,12 @@ footer p {
     }
     
     nav a {
-        /* border: 1px solid black; */
         padding: 1.5em 1em;
-    }
-
-    article.promo-card {
-        /* background-position: -13em ; */
-        
+        padding-bottom: 1.55em;
     }
     
     article.promo-card h1 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
     
     article.card {
